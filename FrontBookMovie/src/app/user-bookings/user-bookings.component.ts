@@ -10,8 +10,8 @@ import { UserService } from '../user.service';
   styleUrls: ['./user-bookings.component.css']
 })
 export class UserBookingsComponent implements OnInit {
-ticket :Ticket[]=[];
-// userId!: number;
+// ticket :Ticket[]=[];
+ticket:Ticket[]=[];
 userid!: number;
   user!: User;
   id!:number;
@@ -23,35 +23,22 @@ userid!: number;
     private router: Router
   ) { }
 
-  // ngOnInit(): void {
-  //   this.userId = this.route.snapshot.params['userId'];
-  //   console.log(this.userId);
-  //  this.ticketService.find(this.userId).subscribe((data: Ticket[])=>{
-  //  console.log(data);
-  //  this.ticket = data;
-//});
-
   ngOnInit(): void {
-    const user: any = localStorage.getItem('User');
- 
-    this.userid =JSON.parse(user).value.userid;
-   
-   this.ticketService.find(this.userid).subscribe((data: Ticket[])=>{
+    const user:any = localStorage.getItem('userId');
+    
+   this.ticketService.find(user).subscribe((data: Ticket[])=>{
    console.log(data);
    this.ticket = data;
    console.log(this.ticket);
 });
- 
-
-
-  //   var x = localStorage.getItem("userid");
-  //   console.log(x);
-  //   if(x){
-  //     this.ticketService.getAll().subscribe((data: Ticket[])=>{
-  //       this.ticket = data;
-  //       console.log(this.ticket);
-  //     })  
-  //   }
+    // var x = localStorage.getItem("userid");
+    // console.log(x);
+    // if(x){
+    //   this.ticketService.getAll().subscribe((data: Ticket[])=>{
+    //     this.ticket = data;
+    //     console.log(this.ticket);
+    //   })  
+    // }
   }
 
 }

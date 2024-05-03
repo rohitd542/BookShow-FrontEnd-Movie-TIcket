@@ -9,11 +9,11 @@
   }
   
   .login-card .profile-img-card {
-    width: 96px;
-    height: 96px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto 10px;
     display: block;
-    border-radius: 50%;
+    border-radius: 100%;
   }
   
   .login-card .profile-name-card {
@@ -26,7 +26,7 @@
   
   .login-card .reauth-email {
     display: block;
-    color: #404040;
+    color: #e90808;
     line-height: 2;
     margin-bottom: 10px;
     font-size: 14px;

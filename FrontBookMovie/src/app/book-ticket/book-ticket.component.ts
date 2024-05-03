@@ -141,7 +141,7 @@ flag:boolean=false;
 
 
     this.ticketService.create(this.form.value).subscribe((res:any) => {
-      alert("Your booking has been successful.");
+      alert("Your booking has been successfull.");
          console.log('ticket created successfully!');
          this.router.navigateByUrl('/customerDashboard');
     })

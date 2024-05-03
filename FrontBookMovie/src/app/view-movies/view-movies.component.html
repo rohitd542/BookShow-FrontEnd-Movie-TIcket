@@ -30,11 +30,11 @@ margin: 5%;"
       
         <tr *ngFor="let movie of FindTickets">
           <td  style="color: rgb(129, 110, 223);">{{ movie.movieId }}</td>
-          <strong style="color: rgb(129, 110, 223);"><td>{{ movie.moviename }}</td></strong>
+          <strong style="color: rgb(43, 0, 255);"><td>{{ movie.moviename }}</td></strong>
           <td style="color: rgb(129, 110, 223);">{{ movie.theatrename }}</td>
-          <td style="color: rgb(129, 110, 223);">{{ movie.location }}</td>
+          <td style="color: rgb(39, 129, 0);">{{ movie.location }}</td>
           <td style="color: rgb(129, 110, 223);">{{ movie.slot }}</td>
-          <td style="color: rgb(129, 110, 223);">{{ movie.charges }}/-</td>
+          <td style="color: rgb(247, 28, 28);">{{ movie.charges }}/-</td>
           <td style="color: rgb(129, 110, 223);">{{ movie.date}}</td>
           <td><img src="{{movie.movieLink}}" class="img-thumbnail" alt="..." ></td>
           <a class="btn btn-primary btn-sm" role="button" type="button"

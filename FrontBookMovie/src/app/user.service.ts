@@ -23,7 +23,7 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
     
   getAll(): Observable<any> {
-    return this.httpClient.get(this.apiURL + '/Registrations/')
+    return this.httpClient.get(this.apiURL + '/Registrations')
     .pipe(
       catchError(this.errorHandler)
     )
@@ -32,7 +32,7 @@ export class UserService {
 
   create(user:User): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/Registrations/', JSON.stringify(user), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/Registrations', JSON.stringify(user), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)

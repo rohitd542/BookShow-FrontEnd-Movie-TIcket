@@ -27,22 +27,19 @@ export class TicketService {
   }
 
   create (ticket:Ticket) : Observable<any>{
-    return this.httpClient.post(this.apiURL+'/BookTickets/',JSON.stringify(ticket),this.httpOptions)
+    return this.httpClient.post(this.apiURL+'/BookTickets',JSON.stringify(ticket),this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
 
   // find(Bookid:number):Observable<any>{
-  //   return this.httpClient.get(this.apiURL+'/BookTickets/'+Bookid)
-  //   .pipe(
-  //     catchError(this.errorHandler)
-      
-      find(userId:number):Observable<any>{
-        return this.httpClient.get(this.apiURL+'/BookTickets/'+userId)
-        .pipe(
-          catchError(this.errorHandler)
-    )
+    find(userId:number):any{
+     return this.httpClient.get(this.apiURL+'/BookTickets/'+ userId)
+   
+    // .pipe(
+    //   catchError(this.errorHandler)
+    // )
   }
 
   update(Bookid:number,ticket:Ticket):Observable<any>{

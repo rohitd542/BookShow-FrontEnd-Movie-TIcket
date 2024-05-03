@@ -9,22 +9,22 @@ import { User } from '../user';
 export class NavbarComponent implements OnInit {
   IsLoggedIn: boolean = false;
   IsAdmin: boolean = false;
-  IsCustomer:boolean=false
+  user:any;
+  IsCustomer:boolean=false;
   users: User[] = [];
-  id!:number;
+  id?:any;
+
+
+  userType: any = localStorage.getItem("role");
+
   constructor(public userService: UserService) {}
 
   ngOnInit(): void {
-    this.IsLoggedIn = localStorage.getItem('User') != null;
-    var x = localStorage.getItem('User');
+    this.IsLoggedIn = localStorage.getItem('app_token') != null;
+    var x = localStorage.getItem('app_token');
     if(x){
-      this.IsAdmin=JSON.parse(x).value.username=='Admin';
-      // this.id=JSON.parse(x).userId;
-      // console.log(this.id)
-      this.IsCustomer = JSON.parse(x).value.username=='Customer';
-      this.id = JSON.parse(x).value.userid;
-      console.log(this.id);
-      
+      this.user=localStorage.getItem('role'); 
+      this.id=localStorage.getItem('userId');     
      }
 
      this.userService.getAll().subscribe((data: User[])=>{
@@ -36,7 +36,8 @@ export class NavbarComponent implements OnInit {
   //  this.load();
 
   Logout() {
-    localStorage.removeItem('User');
+    localStorage.removeItem('app_token');
+    localStorage.clear();
     location.href = '/login';
   }
 }
