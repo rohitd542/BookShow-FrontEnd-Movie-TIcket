@@ -1,0 +1,28 @@
+
+<div class="container">    
+
+    <a href="#" routerLink="/adminDashboard" style=" margin:2%;"class="btn btn-success">Back</a>
+    <h1 style="margin: 2%;">All User Bookings</h1>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+              <tr>
+                <th></th>
+                <th>BookId</th>
+                <th>SeatNum</th>
+                <th>MovieId</th>
+                <th>UserId</th>
+                <th>Date</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let post of tickets">
+                <td></td>
+                <td>{{ post.bookid }}</td>
+                <td>{{ post.seatnum }}</td>
+                <td>{{ post.movieId }}</td>
+                <td>{{ post.userId }}</td>
+                <td>{{ post.date }}</td>
+              </tr>
+        </tbody>
+    </table>
+ </div>

@@ -1,0 +1,137 @@
+<div class="register-card" style="background-color:rgb(243, 233, 233);;
+box-shadow: 10px 10px 5px 5px rgb(231, 243, 248);">
+  <img class="profile-img-card" src="assets/img/logologin.png" />
+  <p class="profile-name-card"></p>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form-signup">
+    <span class="reauth-email"></span>
+    <div class="row">
+      <div class="col-sm-10">
+        <input
+          #Email
+          formControlName="username"
+          type="text"
+          class="form-control"
+          id="username"
+          required
+          placeholder="Enter UserName"
+          autofocus
+        />
+        <div
+          *ngIf="f['username'].touched && f['username'].invalid"
+          
+        >
+        <small>UserName is required!!</small> 
+          <!-- <div *ngIf="f['username'].errors && f['username'].errors['required']">
+            <small>UserName is required!!</small> 
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-10">
+        <input
+          #Email
+          formControlName="email"
+          type="email"
+          class="form-control"
+          id="inputEmail"
+          required
+          placeholder="Enter Email Address"
+          autofocus
+        />
+        <div
+          *ngIf="f['email'].touched && f['email'].invalid"
+          >
+          <div *ngIf="f['email'].errors && f['email'].errors['required']">
+            <small>Email is Required!!</small> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-10">
+        <input
+          #PWD
+          formControlName="password"
+          type="password"
+          class="form-control"
+          id="inputPassword"
+          required
+          placeholder="Enter Password"
+        />
+        <div
+          *ngIf="f['password'].touched && f['password'].invalid"
+          
+        >
+          <div *ngIf="f['password'].errors && f['password'].errors['required']">
+            <small>Password is required!!</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-10">
+        <input
+          #PWD
+          formControlName="confirmpassword"
+          type="password"
+          class="form-control"
+          id="inputPassword"
+          required
+          placeholder="Enter Confirm Password"
+        />
+        <div
+          *ngIf="f['confirmpassword'].touched && f['confirmpassword'].invalid"
+          
+        >
+          <div
+            *ngIf="
+              f['confirmpassword'].errors &&
+              f['confirmpassword'].errors['required']
+            "
+          >
+           <small> Confirm Password is Required!!</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-10">
+        <input
+          #Email
+          formControlName="usertype"
+          type="text"
+          class="form-control"
+          id="usertype"
+          required
+          placeholder="Usertype - customer"
+          autofocus
+        />
+        <div
+          *ngIf="f['usertype'].touched && f['usertype'].invalid"
+         
+        >
+          <div *ngIf="f['usertype'].errors && f['usertype'].errors['required']">
+            <small>UserType is Required!!</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="btn btn-primary btn-block btn-lg btn-signup"
+      type="submit"
+    >
+      Click To Sign Up
+    </button>
+  </form>
+  <a class="forgot-password" routerLink="/login">Already Register ? 🔗</a>
+</div>
+
+<style></style>
+
+

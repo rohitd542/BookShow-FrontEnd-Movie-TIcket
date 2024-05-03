@@ -1,0 +1,143 @@
+
+<div class="container">
+    <h1>Create Movie Details</h1>
+  
+    <a href="#" routerLink="/movieIndex" class="btn btn-primary">Back</a>
+  
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input
+          formControlName="location"
+          id="location"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['location'].touched && f['location'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['location'].errors && f['location'].errors['required']">
+            movieId is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="theatrename">Theatrename:</label>
+        <input
+          formControlName="theatrename"
+          id="theatrename"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['theatrename'].touched && f['theatrename'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['theatrename'].errors && f['theatrename'].errors['required']">
+            theatrename is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="moviename">Moviename:</label>
+        <input
+          formControlName="moviename"
+          id="moviename"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['moviename'].touched && f['moviename'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['moviename'].errors && f['moviename'].errors['required']">
+            moviename is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="movieLink">MovieLink:</label>
+        <textarea
+          formControlName="movieLink"
+          id="movieLink"
+          type="text"
+          class="form-control"
+        >
+        </textarea>
+        <div
+          *ngIf="f['movieLink'].touched && f['movieLink'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['movieLink'].errors && f['movieLink'].errors['required']">
+            movieLink is required.
+          </div>
+        </div>
+      </div> 
+  
+      <div class="form-group">
+        <label for="slot">Slot:</label>
+        <input
+          formControlName="slot"
+          id="slot"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['slot'].touched && f['slot'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['slot'].errors && f['slot'].errors['required']">
+            movieId is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="charges">Charges:</label>
+        <input
+          formControlName="charges"
+          id="charges"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['charges'].touched && f['charges'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['charges'].errors && f['charges'].errors['required']">
+            charges is required.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input
+          formControlName="date"
+          id="date"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="f['date'].touched && f['date'].invalid"
+          class="alert alert-danger"
+        >
+          <div *ngIf="f['date'].errors && f['date'].errors['required']">
+            date is required.
+          </div>
+        </div>
+      </div>
+  
+      <!-- <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+        Submit
+      </button> -->
+      <button class="btn btn-primary" type="submit" >
+        Add Movie
+      </button>
+    </form>
+  </div>
+  

@@ -1,0 +1,36 @@
+<div class="container">    
+    <a href="#" routerLink="/movieCreate" style=" margin:2%;"class="btn btn-success">Create New Movie Details</a>
+      
+    <table class="table table-striped">
+        <thead class="thead-dark">
+              <tr>
+                <th>MovieId</th>
+                <th>Location</th>
+                <th>Theatrename</th>
+                <th>Moviename</th>
+                <th>Movie</th>
+                <th>Slot</th>
+                <th>Charges</th>
+                <th>Date</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let post of datas">
+                <td>{{ post.movieId }}</td>
+                <td>{{ post.location }}</td>
+                <td>{{ post.theatrename }}</td>
+                <td>{{ post.moviename }}</td>
+                <td><img src="{{post.movieLink}}" class="img-thumbnail" alt="..." ></td>
+               
+                <td>{{ post.slot }}</td>
+                <td>{{ post.charges }}</td>
+                <td>{{ post.date }}</td>
+                <td>
+                  <a href="#" [routerLink]="['/movieView/', post.movieId, 'view']" class="btn btn-info">View</a>
+                  <button type="button" (click)="deletePost(post.movieId)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+ </div>

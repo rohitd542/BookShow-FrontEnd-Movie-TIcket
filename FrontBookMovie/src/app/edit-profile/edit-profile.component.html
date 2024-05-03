@@ -1,0 +1,92 @@
+<div class="container">
+    <h1 class="text-center my-3">User Profile</h1>
+
+    <div class="login-card" style="background-color:rgb(243, 233, 233);;
+    box-shadow: 10px 10px 5px 5px rgb(231, 243, 248);"><img class="profile-img-card" src="assets/img/profile.png" />
+        <p class="profile-name-card"></p>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="row">
+            <div class="col-md-6"><p class="text-center"><strong>UserID:</strong></p>
+                <input 
+                formControlName="userid"
+                id="userid" 
+                type="text" 
+                [(ngModel)]="user.userid"
+                class="form-control" />
+            <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger">
+                <div *ngIf="f['userid'].errors && f['userid'].errors['required']">UserId is required.</div>
+            </div>
+            </div>
+            <div class="col-md-6"><p class="text-center"><strong>Username:</strong></p>
+                <input 
+                formControlName="username"
+                id="username" 
+                type="text" 
+                [(ngModel)]="user.username"
+                class="form-control" />
+            <div *ngIf="f['username'].touched && f['username'].invalid" class="alert alert-danger">
+                <div *ngIf="f['username'].errors && f['username'].errors['required']">Username is required.</div>
+            </div>
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-12"><p class="text-center"><strong>Email:</strong></p>
+                <input 
+                formControlName="email"
+                id="email" 
+                type="text" 
+                [(ngModel)]="user.email"
+                class="form-control" />
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+            </div>
+            </div>    
+        </div>
+
+        <div class="row">
+            <div class="col-md-6"><p class="text-center"><strong>Password:</strong></p>
+                <input 
+                formControlName="password"
+                id="password" 
+                type="password"
+                [(ngModel)]="user.password"
+                class="form-control" />
+            <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+            </div>
+            </div>
+            <div class="col-md-6"><p class="text-center"><strong>Confirm Password:</strong></p>
+                <input 
+                formControlName="confirmpassword"
+                id="confirmpassword" 
+                type="password"
+                [(ngModel)]="user.confirmpassword"
+                class="form-control" />
+            <div *ngIf="f['confirmpassword'].touched && f['confirmpassword'].invalid" class="alert alert-danger">
+                <div *ngIf="f['confirmpassword'].errors && f['confirmpassword'].errors['required']">confirmPassword is required.</div>
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12"><p class="text-center"><strong>UserType:</strong></p>
+                <input 
+                formControlName="usertype"
+                id="usertype" 
+                type="text"
+                [(ngModel)]="user.usertype" 
+                class="form-control" />
+            <div *ngIf="f['userytpe'].touched && f['usertype'].invalid" class="alert alert-danger">
+                <div *ngIf="f['usertype'].errors && f['usertype'].errors['required']">UserType is required.</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 my-3"><p class="text-center my-2"><button class="btn btn-primary edit_profile_btn" type="submit">Update</button></p></div>
+        </div>
+    </form>
+        
+    </div>
+</div>

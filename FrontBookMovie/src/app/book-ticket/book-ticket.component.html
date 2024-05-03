@@ -1,0 +1,227 @@
+<section
+  class="vh-100 bg-image"
+  style="
+    background-image: url('https://wallpaperaccess.com/full/1561985.jpg');
+    background-size: auto;
+    
+  "
+>
+<div class="register-card"><img class="profile-img-card" src="../assets/img/logo14.png" />
+  <p class="profile-name-card"></p>
+  <h1 style="text-align: center;">BookTicket</h1>
+  <form [formGroup]="form" (ngSubmit)="submit()"  class="form-signup"><span class="reauth-email"></span>
+      <div class="row">
+          <div class="col-md-6 form-group">
+              <input #Email formControlName="seatnum" type="number" class="form-control input_userid" id="seatnum" required placeholder="seatnum" />
+              <div *ngIf="f['seatnum'].touched && f['seatnum'].invalid" class="alert alert-danger my-2">
+                  <div *ngIf="f['seatnum'].errors && f['seatnum'].errors['required']">seatnum is required.</div>
+              </div>
+          </div>
+          <div class="col-md-6 form-group">
+              <input #Email formControlName="movieId" type="number" class="form-control input_itemid" id="movieId" required placeholder="movieId" />
+              <div *ngIf="f['movieId'].touched && f['movieId'].invalid" class="alert alert-danger">
+                  <div *ngIf="f['movieId'].errors && f['movieId'].errors['required']">MovieId is required.</div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-6 form-group">
+              <input #Email formControlName="userid" type="text" class="form-control input_userid" id="userid" required placeholder="userid" />
+              <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger my-2">
+                  <div *ngIf="f['userid'].errors && f['userid'].errors['required']">UserID is required.</div>
+              </div>
+          </div>
+          <div class="col-md-6 form-group">
+              <input #Email formControlName="date" type="text" class="form-control" id="date" required placeholder="date" />
+              <div *ngIf="f['date'].touched && f['date'].invalid" class="alert alert-danger">
+                  <div *ngIf="f['date'].errors && f['date'].errors['required']">date is required.</div>
+              </div>
+          </div>
+      </div>
+      
+      
+   
+
+    
+      <button class="btn btn-primary btn-block btn-lg btn-signup" type="submit">Book</button>
+      </form>
+
+
+      
+
+
+<!-- <div class="container">
+  <h1>Book Ur Ticket</h1>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    
+    <div class="form-group">
+      <label for="seatnum">seatnum:</label>
+      <input
+        formControlName="seatnum"
+        id="seatnum"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['seatnum'].touched && f['seatnum'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['seatnum'].errors && f['seatnum'].errors['required']">
+          seatnum is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Movie">movieId:</label>
+      <input
+        formControlName="Movie"
+        id="Movie"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['Movie'].touched && f['Movie'].invalid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="f['Movie'].errors && f['Movie'].errors['required']">
+          movieId is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="User">userid:</label>
+      <input
+        formControlName="User"
+        id="userid"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['User'].touched && f['User'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="
+            f['User'].errors &&
+            f['User'].errors['required']
+          "
+        >
+        userid  is required.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input
+        formControlName="date"
+        id="date"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['date'].touched && f['date'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="f['date'].errors && f['date'].errors['required']"
+        >
+        date is required.
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+      BookTicket
+    </button>
+  </form>
+</div>  -->
+
+
+
+
+
+  <!-- <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px">
+            <div class="card-body p-5">
+              <strong
+                ><i
+                  ><h2
+                    class="text-uppercase text-center mb-5"
+                    style="color: rgb(45, 218, 218)"
+                  >
+                    Book Ur Ticket
+                  </h2></i
+                ></strong
+              >
+              <form
+                [formGroup]="form"
+                (ngSubmit)="submit()"
+                class="form-signup"
+              >
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="form3Example1cg"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="form3Example1cg"
+                    >Movie Id
+                  </label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="form3Example3cg"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="form3Example3cg"
+                    >Seat Num</label
+                  >
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    id="form3Example4cg"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="form3Example4cg"
+                    >User Id</label
+                  >
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="date"
+                    id="form3Example4cdg"
+                    class="form-control form-control-lg"
+                  />
+                  <label class="form-label" for="form3Example4cdg">Date</label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="BookTicket"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
+                  >
+                    BookTicket
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+ -->

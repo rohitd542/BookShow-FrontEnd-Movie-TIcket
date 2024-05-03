@@ -1,0 +1,46 @@
+<h3 class="text-center my-5 movies_title"
+style="background-color:#d0f30f;
+text-shadow: 10px;
+padding: 2%;
+margin: 5%;"
+>
+<b>Here Are  The List of Movies Availabe to Book </b></h3>
+<!-- 
+<form [formGroup]="searchForm">
+  <input formControlName="search" />
+</form> -->
+
+<div class="container">
+  <div class="card movies_card">
+    <div class="card-body">
+      <table class="table table-striped text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th>Movie Id</th>
+                <th>Movie Name</th>
+                <th>Theatre Name</th>
+                <th>Location</th>
+                <th>Slot</th>
+                <th>Charges</th>
+                <th>Date</th>
+                <th>Movie</th>
+                <th>BookTicket</th>
+              </tr>
+        </thead>
+      
+        <tr *ngFor="let movie of FindTickets">
+          <td  style="color: rgb(129, 110, 223);">{{ movie.movieId }}</td>
+          <strong style="color: rgb(129, 110, 223);"><td>{{ movie.moviename }}</td></strong>
+          <td style="color: rgb(129, 110, 223);">{{ movie.theatrename }}</td>
+          <td style="color: rgb(129, 110, 223);">{{ movie.location }}</td>
+          <td style="color: rgb(129, 110, 223);">{{ movie.slot }}</td>
+          <td style="color: rgb(129, 110, 223);">{{ movie.charges }}/-</td>
+          <td style="color: rgb(129, 110, 223);">{{ movie.date}}</td>
+          <td><img src="{{movie.movieLink}}" class="img-thumbnail" alt="..." ></td>
+          <a class="btn btn-primary btn-sm" role="button" type="button"
+            routerLink="/bookTicket"><strong><td>Book</td></strong></a>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

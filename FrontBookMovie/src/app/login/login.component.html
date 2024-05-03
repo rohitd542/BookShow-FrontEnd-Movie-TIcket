@@ -1,0 +1,37 @@
+<div class="login-card" style="background-color:rgb(243, 233, 233);
+ box-shadow: 10px 10px 5px 5px rgb(231, 243, 248);">
+  <img class="profile-img-card" src="assets/img/logologin.png" />
+  <p class="profile-name-card"></p>
+  <form class="form-signin">
+    <span class="reauth-email"></span>
+    <input
+      #Email
+      type="email"
+      class="form-control"
+      id="inputEmail"
+      required
+      placeholder="Email Address ✉️"
+      autofocus
+    />
+    <input
+      #PWD
+      type="password"
+      class="form-control"
+      id="inputPassword"
+      required
+      placeholder="Password 🔑"
+    />
+    <!-- <a routerLink="/customerDashboard"> -->
+    <button
+    
+      class="btn btn-primary btn-block btn-lg btn-signin"
+      (click)="Login(Email.value, PWD.value)" 
+    >
+      Sign in
+    </button>
+  <!-- </a> -->
+  </form>
+  <a class="forgot-password" routerLink="/signup">Click To Register ‼️</a>
+</div>
+
+<style></style>

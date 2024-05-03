@@ -1,0 +1,50 @@
+<div class="container" >
+    <h1 class="text-center my-3">My Profile</h1>
+  
+    <div class="login-card" style="background-color:rgb(243, 233, 233);;
+    box-shadow: 10px 10px 5px 5px rgb(231, 243, 248);">
+      <img class="profile-img-card" src="assets/img/profile.png" />
+      <p class="profile-name-card"></p>
+      <div class="row">
+        <div class="col-md-6">
+          <!-- <p class="text-center"><strong>UserID:</strong> {{ user.userid }}</p> -->
+          <p class="text-center"><strong>UserID:</strong> {{ user.userid }}</p>
+        </div>
+        <div class="col-md-6">
+          <p class="text-center">
+            <strong>Username:</strong> {{ user.username }}
+          </p>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text-center"><strong>Email:</strong> {{ user.email }}</p>
+        </div>
+        <div class="col-md-6">
+          <p class="text-center"><strong>Password:</strong> {{ user.password }}</p>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-6">
+          <p class="text-center">
+            <strong>UserType:</strong> {{ user.usertype }}
+          </p>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center my-2">
+            <a
+            class="btn btn-primary edit_profile_btn"
+            routerLink="/editProfile/{{ userid }}"
+            >Edit Profile</a
+          >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

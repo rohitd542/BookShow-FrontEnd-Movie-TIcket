@@ -1,0 +1,40 @@
+<h1 class="text-center my-5 customer_dashboard_title">Customer Dashboard</h1>
+
+<div class="container-fluid">
+  <div class="row justify-content-around" style="margin: 5%">
+    <div class="col-4" >
+      <div class="card customer_dashboard_card" >
+        <a routerLink="/viewMovies" class="view_items_link">
+          <div class="grid text-center" style="margin-right: 0%cd l">
+            <img
+              src="../../assets/img/download.png"
+              class="customer_dashboard_img"
+              alt=""
+            />
+            <h5 class="text-center my-3">Click To Search Movies🎬</h5>
+            <p class="text-muted text-center">
+              Click Here To View Movie Tickets.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card customer_dashboard_card" >
+        <a routerLink="/userBookings/{{userid}}" class="view_items_link">
+        <div class="grid text-center" style="margin-right: 0%cd l">
+          <img
+            src="../../assets/img/logo6.png"
+            class="customer_dashboard_img"
+            alt=""
+          />
+          <h5 class="text-center my-3">Check Your Bookings 🎬</h5>
+          <p class="text-muted text-center">
+            Click Here To View Booked Movies.
+          </p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
