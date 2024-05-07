@@ -35,8 +35,8 @@ export class MoviesCreateComponent implements OnInit {
     console.log(this.form.value);
    
     this.dataService.create(this.form.value).subscribe((res:any) => {
-      alert("Movie details are added");
-      console.log('Post created successfully!');
+      alert("Movie Details Are Added Successfully..! 🍿");
+      console.log('Post Created Successfully!');
       //this.form.reset();
        this.router.navigateByUrl('/movieIndex');
   })

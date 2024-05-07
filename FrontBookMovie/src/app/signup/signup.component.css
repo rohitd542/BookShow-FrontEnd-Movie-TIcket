@@ -1,19 +1,19 @@
 .register-card {
-    max-width: 500px;
+    max-width: 400px;
     padding: 40px 40px;
-    background-color: #F7F7F7;
+    background-color: #fff0f0;
     margin: 0 auto 25px;
     margin-top: 50px;
-    border-radius: 2px;
+    border-radius: 10px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   }
   
   .register-card .profile-img-card {
-    width: 96px;
-    height: 96px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto 10px;
     display: block;
-    border-radius: 50%;
+    border-radius: 30%;
   } 
   
   .register-card .profile-name-card {
@@ -37,49 +37,51 @@
     box-sizing: border-box;
   } 
   
-  .register-card .form-signup input[type=email], .register-card .form-signup input[type=password], .register-card .form-signup input[type=text], .register-card .form-signup button {
-    height: 44px;
-    font-size: 16px;
-    width: 100%;
+  .register-card .form-signup input[type=email], .register-card .form-signup input[type=password], .register-card .form-signup input[type=text] {
+    height: 40px;
+    font-size: 15px;
+    width: 120%;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     z-index: 1;
-    position: relative;
+    position: center;
     box-sizing: border-box;
   }
+
+  /* .register-card .form-signup button  */
   
   .register-card label {
     color: #000000;
   }
   
   .register-card .form-signup .form-control:focus {
-    border-color: rgb(104, 145, 162);
+    border-color: rgb(142, 221, 255);
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    -webkit-box-shadow: inset 0 1px 1px rgba(30, 27, 27, 0.075),0 0 8px rgb(104, 145, 162);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
   }
   
   .register-card .btn.btn-signup {
-    font-weight: 700;
-    height: 36px;
-    line-height: 36px;
+    font-weight: 800;
+    height: 46px;
+    line-height: 46px;
     font-size: 14px;
-    background: rgb(104, 145, 162);
-    border-radius: 3px;
-    border: none;
+    background: rgb(168, 165, 255);
+    border-radius: 52px;
+    border: 5px;
     transition: all 0.218s;
     padding: 0;
   }
   
   .register-card .btn.btn-signup:hover, .register-card .btn.btn-signup:active, .register-card .btn.btn-signup:focus {
-    background: rgb(12, 97, 33);
+    background: rgb(99, 234, 133);
   }
   
   .register-card .forgot-password {
-    color: rgb(104, 145, 162);
+    color: rgb(245, 83, 83);
   }
   
   .register-card .forgot-password:hover, .register-card .forgot-password:active, .register-card .forgot-password:focus {
-    color: rgb(12, 97, 33);
+    color: rgb(118, 246, 150);
   }
   

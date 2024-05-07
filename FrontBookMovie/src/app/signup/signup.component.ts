@@ -37,8 +37,9 @@ export class signupComponent implements OnInit {
       alert("Password and Confirm Password must be same!");
     }
     this.userService.create(this.form.value).subscribe((res:any) => {
-         console.log('Account signed successfully!');
+         console.log('Account Signed Successfully!');
          this.router.navigateByUrl('login');
+         alert("Congratulations! Your Account HasBeen Created Successfully!🥳🎉");
     })
   }
 }

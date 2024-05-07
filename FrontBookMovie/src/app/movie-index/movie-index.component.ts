@@ -20,9 +20,13 @@ datas: Data[]=[];
   }
 
   deletePost(id:number){
+    const confirmDelete = confirm('Are You Sure You Want To Delete This Movie 🎦?');
+    if(confirmDelete){
     this.dataService.delete(id).subscribe(res => {
          this.datas = this.datas.filter(item => item.movieId !== id);
-         console.log('Post deleted successfully!');
+         alert("Movie Details Deleted Successfully..! 🍿");
+         console.log('Post Deleted Successfully!');
+    
     })
   }
-}
+}}

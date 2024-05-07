@@ -54,17 +54,13 @@
 
 <nav class="navbar navbar-dark navbar-expand-md bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="">🎬A2Z Book Your Movie🎬</a>
-    <button
-      data-toggle="collapse"
-      data-target="#navcol-1"
-      class="navbar-toggler"
-    >
-      <span class="sr-only">Toggle navigation</span
-      ><span class="navbar-toggler-icon"></span>
+    <a class="navbar-brand" routerLink="">🎬A2Z Book Your Movie🍿</a>
+    <button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler">
+      <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navcol-1">
       <ul class="nav navbar-nav">
+
         <li [hidden]="user" class="nav-item">
           <a class="nav-link active" routerLink="/login">Login👤</a>
         </li>
@@ -73,68 +69,39 @@
           <a class="nav-link active" routerLink="/signup">SignUp👥</a>
         </li>
 
-        <!-- <li [hidden]="user" class="nav-item">
-          <a class="nav-link active" routerLink="/customerDashboard">DASHBOARD🔐</a>  
-        </li> -->
-
-
-<!-- 
-        <li [hidden]="!user" class="nav-item">
-          <a class="nav-link active" routerLink="/customerDashboard"> DashBoard✉️</a>  
-        </li> -->
-
-
-        <!-- <li class="nav-item">
-          <a class="nav-link active" [routerLink]="localStorage.getItem('role') === 'customer' ?  '/customerDashboard':  '/adminDashboard'">
-            DashBoard✉️
-          </a>
-        </li> -->
 
 
         <li class="nav-item" *ngIf="userType === 'customer'">
-
-          <a class="nav-link active" routerLink="/customerDashboard">
-            DashBoard
-          </a>
+          <a class="nav-link active" routerLink="/customerDashboard">DashBoard🔓</a>
         </li>
 
         <li class="nav-item" *ngIf="userType === 'Admin'">
-
-          <a class="nav-link active" routerLink="/adminDashboard">
-            DashBoard✉️
-          </a>
+          <a class="nav-link active" routerLink="/adminDashboard">DashBoard🔓</a>
         </li>
 
 
-
-
-
-        <!-- <li [hidden]="!user" class="nav-item">
-          <a class="nav-link active" routerLink="/customerDashboard"> DASHBOARD</a>  
-        </li> -->
-        
-        
-
-       
 
         <li [hidden]="!user" class="nav-item">
           <a class="nav-link active" [routerLink]="['/viewProfile',id]">User Profile🪪</a>
         </li>
+        
 
         <li [hidden]="!user" class="nav-item">
           <a class="nav-link" (click)="Logout()">LogOut⛔</a>
-        </li>      
+        </li>
       </ul>
     </div>
+
+
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav ">
-        <li  class="nav-item">
+        <li class="nav-item">
           <a class="nav-link active navbar_aboutus" routerLink="/aboutus">AboutUs🔗</a>
-        </li>   
-        <li  class="nav-item">
+        </li>
+        <li class="nav-item">
           <a class="nav-link active navbar_contactus" routerLink="/contactus">ContactUs📞</a>
-        </li>    
-      </ul>		  
+        </li>
+      </ul>
     </div>
   </div>
 </nav>

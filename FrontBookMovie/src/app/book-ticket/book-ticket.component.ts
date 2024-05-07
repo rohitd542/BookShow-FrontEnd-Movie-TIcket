@@ -137,13 +137,13 @@ flag:boolean=false;
     this.dataService.find(this.form.value.movieId).subscribe((data: Data)=>{
       console.log(data);
       this.data = data;
-    });
-
-
+    
+      
     this.ticketService.create(this.form.value).subscribe((res:any) => {
-      alert("Your booking has been successfull.");
-         console.log('ticket created successfully!');
+      alert("Your Booking Has Been Done Successfully..!🎬");
+         console.log('Ticket Created Successfully!');
          this.router.navigateByUrl('/customerDashboard');
+        });
     })
   }
 }

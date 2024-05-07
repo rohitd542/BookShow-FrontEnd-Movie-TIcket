@@ -9,15 +9,18 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './customer-dashboard.component.html',
   styleUrls: ['./customer-dashboard.component.css']
 })
+
 export class CustomerDashboardComponent implements OnInit {
 userid!:number;
 user!: User;
+
   constructor(
     public userService: UserService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
 
+  
   ngOnInit(): void {
     this.userid = this.route.snapshot.params['userid'];
     console.log(this.userid);

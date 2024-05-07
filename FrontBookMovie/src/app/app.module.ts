@@ -14,7 +14,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { LoginComponent } from './login/login.component';
-  
 import { BookTicketComponent } from './book-ticket/book-ticket.component';
 import { UserBookingsComponent } from './user-bookings/user-bookings.component';
 import { MovieIndexComponent } from './movie-index/movie-index.component';
