@@ -11,8 +11,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 
 export class CustomerDashboardComponent implements OnInit {
-userid!:number;
-user!: User;
+  userid!: any;
+  user!: User;
 
   constructor(
     public userService: UserService,
@@ -20,14 +20,14 @@ user!: User;
     private router: Router
   ) { }
 
-  
+
   ngOnInit(): void {
-    this.userid = this.route.snapshot.params['userid'];
+    this.userid = localStorage.getItem("userId");
     console.log(this.userid);
-this.userService.find(this.userid).subscribe((data: User)=>{
-  console.log(data);
-  this.user = data;
-});
+    this.userService.find(this.userid).subscribe((data: User) => {
+      console.log(data);
+      this.user = data;
+    });
   }
 
 }

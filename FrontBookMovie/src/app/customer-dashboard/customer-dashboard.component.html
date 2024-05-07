@@ -17,7 +17,7 @@
     </div>
     <div class="col-4">
       <div class="card customer_dashboard_card">
-        <a routerLink="/userBookings/{{userid}}" class="view_items_link">
+        <a [routerLink]="['/userBookings',userid]" class="view_items_link">
           <div class="grid text-center" style="margin-right: 0%cd l">
             <img src="../../assets/img/logo6.png" class="customer_dashboard_img" alt="" />
             <h5 class="text-center my-3">Check Your Bookings 🎬</h5>

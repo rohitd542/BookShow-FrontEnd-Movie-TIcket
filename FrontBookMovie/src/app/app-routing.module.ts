@@ -28,7 +28,7 @@ const routes: Routes = [
   {path:"editProfile/:userid",component:EditProfileComponent},
   {path:"bookTicket",component:BookTicketComponent},
   //{path:"userBookings/:userid",component:UserBookingsComponent},
-  {path:"userBookings",component:UserBookingsComponent},
+  {path:"userBookings/:id",component:UserBookingsComponent},
   {path:"movieIndex",component:MovieIndexComponent},
   {path:"movieCreate",component:MoviesCreateComponent},
   {path:"allBookings",component:AllBookingsComponent},

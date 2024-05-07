@@ -34,7 +34,7 @@ this.form = new FormGroup({
   email: new FormControl('', Validators.required),
   password: new FormControl('', Validators.required),
   confirmpassword: new FormControl('', Validators.required),
-  usertype: new FormControl('', Validators.required)
+ // usertype: new FormControl('', Validators.required)
 });
   }
   get f(){
