@@ -17,13 +17,10 @@ export class DataService {
   }
   constructor(private httpClient: HttpClient) { }
 
-  // public sendGetRequest(){
-  //   return this.httpClient.get(this.apiURL+'/FindTickets');
-  // }
   public sendGetRequest(){
    
     const token = window.localStorage.getItem("app_token");
-    // console.log(token);
+ 
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
     return this.httpClient.get(this.apiURL+'/FindTickets', {headers});
   }
@@ -36,13 +33,7 @@ export class DataService {
       catchError(this.errorHandler)
     )
   }
-  // create(data:any): Observable<any> {
-  //   return this.httpClient.post(this.apiURL + '/FindTickets', JSON.stringify(data), this.httpOptions)
-  //   .pipe(
-  //     catchError(this.errorHandler)
-  //   )
-  // } 
-  
+
   create(data:any): Observable<any> {
     const token = window.localStorage.getItem("app_token");
     // console.log(token);

@@ -10,7 +10,6 @@ import { UserService } from '../user.service';
   styleUrls: ['./user-bookings.component.css']
 })
 export class UserBookingsComponent implements OnInit {
-// ticket :Ticket[]=[];
 ticket:Ticket[]=[];
 userid!: number;
   user!: User;
