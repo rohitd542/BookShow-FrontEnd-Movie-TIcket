@@ -21,44 +21,9 @@ export class LoginComponent implements OnInit {
   Login(Email: string, PWD: string): any {
     console.log("Email "+Email+ "PWD "+PWD);
     var param = { email: Email, pwd: PWD };
-    //console.log(param);
-
-  //   this.http
-  //     .get<any>('http://localhost:5055/api/Registrations/' + Email + '/' + PWD)
-  //     .subscribe((data) => {
-
-  //       console.log(data);
-  //       if(data.token){
-  //         this.decodeToken(data.token);
-  //         console.log(this.user);
-  //         if (this.user == 'Admin') {
-  //           window.location.href = '/adminDashboard';
-  //           alert("Congrats! You’ve Successfully Logged In As Admin🥳🎉");
-  //         }
-  //          else {
-  //           window.location.href = '/customerDashboard';
-  //           alert("Congrats! You’ve Successfully Logged In🥳🎉");
-  //         }
-  //       }
-  //       else{
-  //         alert("Invalid credentials");
-  //       }
-       
-        
-        
-
-  //       // localStorage.setItem('User', JSON.stringify(data));
-  //       //console.log(data.userName=='Admin');return;
-
-  //     })
-
-  //   return false;
-  // }
-
-
 
   this.http
-  // .get<any>('http://localhost:51140/api/Registrations/' + Email + '/' + PWD)
+  
   .post(`http://localhost:5055/api/Registrations/${Email}/${PWD}`,{})
 
  
@@ -76,7 +41,7 @@ export class LoginComponent implements OnInit {
         window.location.href = '/customerDashboard';
       }
     }else{
-      alert("please check credentials");
+      alert("Please Check Your Details..!");
     }
    
   });

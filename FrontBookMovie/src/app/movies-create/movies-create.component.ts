@@ -27,7 +27,7 @@ export class MoviesCreateComponent implements OnInit {
      date: new FormControl('', Validators.required),
     });
   }
-  get f(){
+  get f(){ 
     return this.form.controls;
   }
   

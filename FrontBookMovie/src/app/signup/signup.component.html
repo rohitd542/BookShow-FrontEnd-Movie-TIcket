@@ -1,7 +1,6 @@
 <div class="register-card" style="background-color:rgb(94, 95, 93);;
 box-shadow: 10px 10px 5px 5px rgb(183, 183, 183);">
-  <!-- <img class="profile-img-card" src="assets/img/logologin.png" /> -->
-  <img class="profile-img-card" src="https://png.pngtree.com/png-vector/20221116/ourmid/pngtree-transparent-register-now-banner-png-image_6458516.png" />
+   <img class="profile-img-card" src="https://png.pngtree.com/png-vector/20221116/ourmid/pngtree-transparent-register-now-banner-png-image_6458516.png" />
   <p class="profile-name-card"></p>
   <form [formGroup]="form" (ngSubmit)="submit()" class="form-signup">
     <span class="reauth-email"></span>
@@ -18,7 +17,7 @@ box-shadow: 10px 10px 5px 5px rgb(183, 183, 183);">
           autofocus
         />
         <div
-          *ngIf="f['username'].touched && f['username'].invalid"
+          *ngIf="f['username'].touched && f['username'].invalid" 
           
         >
         <small>UserName is required!!</small> 
@@ -97,29 +96,6 @@ box-shadow: 10px 10px 5px 5px rgb(183, 183, 183);">
         </div>
       </div>
     </div>
-
-    <!-- <div class="row">
-      <div class="col-sm-10">
-        <input
-          #Email
-          formControlName="usertype"
-          type="text"
-          class="form-control"
-          id="usertype"
-          required
-          placeholder="Captcha : 'customer' 👤"
-          autofocus
-        />
-        <div
-          *ngIf="f['usertype'].touched && f['usertype'].invalid"
-         
-        >
-          <div *ngIf="f['usertype'].errors && f['usertype'].errors['required']">
-            <small>UserType is Required!!</small>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <button
       class="btn btn-primary btn-block btn-lg btn-signup"

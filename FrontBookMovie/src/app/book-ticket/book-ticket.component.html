@@ -12,13 +12,13 @@
   <form [formGroup]="form" (ngSubmit)="submit()"  class="form-signup"><span class="reauth-email"></span>
       <div class="row">
           <div class="col-md-6 form-group">
-              <input #Email formControlName="seatnum" type="number" class="form-control input_userid" id="seatnum" required placeholder="seatnum" />
+              <input #Email formControlName="seatnum" type="number" class="form-control input_userid" id="seatnum" required placeholder="Seat-Num" />
               <div *ngIf="f['seatnum'].touched && f['seatnum'].invalid" class="alert alert-danger my-2">
-                  <div *ngIf="f['seatnum'].errors && f['seatnum'].errors['required']">seatnum is required.</div>
+                  <div *ngIf="f['seatnum'].errors && f['seatnum'].errors['required']">SeatNum is required.</div>
               </div>
           </div>
           <div class="col-md-6 form-group">
-              <input #Email formControlName="movieId" type="number" class="form-control input_itemid" id="movieId" required placeholder="movieId" />
+              <input #Email formControlName="movieId" type="number" class="form-control input_itemid" id="movieId" required placeholder="Movie-Id" />
               <div *ngIf="f['movieId'].touched && f['movieId'].invalid" class="alert alert-danger">
                   <div *ngIf="f['movieId'].errors && f['movieId'].errors['required']">MovieId is required.</div>
               </div>
@@ -27,15 +27,15 @@
 
       <div class="row">
           <div class="col-md-6 form-group">
-              <input #Email formControlName="userid" type="text" class="form-control input_userid" id="userid" required placeholder="userid" />
+              <input #Email formControlName="userid" type="text" class="form-control input_userid" id="userid" required placeholder="User-Id" />
               <div *ngIf="f['userid'].touched && f['userid'].invalid" class="alert alert-danger my-2">
                   <div *ngIf="f['userid'].errors && f['userid'].errors['required']">UserID is required.</div>
               </div>
           </div>
           <div class="col-md-6 form-group">
-              <input #Email formControlName="date" type="text" class="form-control" id="date" required placeholder="date" />
+              <input #Email formControlName="date" type="text" class="form-control" id="date" required placeholder="Date" />
               <div *ngIf="f['date'].touched && f['date'].invalid" class="alert alert-danger">
-                  <div *ngIf="f['date'].errors && f['date'].errors['required']">date is required.</div>
+                  <div *ngIf="f['date'].errors && f['date'].errors['required']">Date is required.</div>
               </div>
           </div>
       </div>

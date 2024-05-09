@@ -8,7 +8,7 @@ import { Ticket } from './ticket';
   providedIn: 'root'
 })
 export class TicketService {
-  // private apiURL = "http://localhost:51140/api";
+
   private apiURL = "http://localhost:5055/api";
 
   httpOptions = {
@@ -33,13 +33,10 @@ export class TicketService {
     )
   }
 
-  // find(Bookid:number):Observable<any>{
+ 
     find(userId:number):any{
      return this.httpClient.get(this.apiURL+'/BookTickets/'+ userId)
-   
-    // .pipe(
-    //   catchError(this.errorHandler)
-    // )
+
   }
 
   update(Bookid:number,ticket:Ticket):Observable<any>{

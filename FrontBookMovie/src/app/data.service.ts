@@ -7,7 +7,7 @@ import { Data } from './data';
   providedIn: 'root'
 })
 export class DataService {
-  // private apiURL = "http://localhost:51140/api";
+  
   private apiURL ="http://localhost:5055/api";
 
   httpOptions = {
@@ -17,8 +17,15 @@ export class DataService {
   }
   constructor(private httpClient: HttpClient) { }
 
+  // public sendGetRequest(){
+  //   return this.httpClient.get(this.apiURL+'/FindTickets');
+  // }
   public sendGetRequest(){
-    return this.httpClient.get(this.apiURL+'/FindTickets');
+   
+    const token = window.localStorage.getItem("app_token");
+    // console.log(token);
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
+    return this.httpClient.get(this.apiURL+'/FindTickets', {headers});
   }
   
   getAll(): Observable<any> {
@@ -29,12 +36,23 @@ export class DataService {
       catchError(this.errorHandler)
     )
   }
+  // create(data:any): Observable<any> {
+  //   return this.httpClient.post(this.apiURL + '/FindTickets', JSON.stringify(data), this.httpOptions)
+  //   .pipe(
+  //     catchError(this.errorHandler)
+  //   )
+  // } 
+  
   create(data:any): Observable<any> {
-    return this.httpClient.post(this.apiURL + '/FindTickets', JSON.stringify(data), this.httpOptions)
+    const token = window.localStorage.getItem("app_token");
+    // console.log(token);
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`)
+    return this.httpClient.post(this.apiURL + '/FindTickets', data,{headers} )
     .pipe(
       catchError(this.errorHandler)
     )
-  } 
+  }
+
 
   find(id:number): Observable<any> {
   

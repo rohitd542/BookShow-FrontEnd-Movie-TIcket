@@ -9,7 +9,7 @@ import { Data } from '../data';
 })
 export class MovieViewComponent implements OnInit {
 
-  id!: number;
+  id!: number; //fields variales
   data!: Data;
   constructor(
     

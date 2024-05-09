@@ -17,8 +17,7 @@ form!:FormGroup;
 data!:Data;
 datas:Data[]=[];
 flag:boolean=false;
-// user!:User;
-// movieId!:number;
+
   constructor(
     public ticketService:TicketService,
     private router :Router,
