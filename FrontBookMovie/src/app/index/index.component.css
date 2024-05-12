@@ -110,7 +110,9 @@
     top: 0;
     transition: all .5s ease;
   }
+  
 
+  
   ul.covers li > * { 
     display: block; 
   }
@@ -397,7 +399,17 @@
     font-size: 24px;
     color: #666;
   }
-
+  
+  /* @for $i from 1 through 20 {
+    .covers.up li:nth-child(#{$i}) 
+    {transition-delay: #{20*50 - $i*50}ms}
+  }
+  
+  @for $i from 1 through 20 {
+    .covers li:nth-child(#{$i}) 
+    {transition-delay: #{$i*50}ms}
+  } */
+  
   header li:nth-child(6) { transition-delay: 50ms }
   header li:nth-child(5) { transition-delay: 100ms }
   header li:nth-child(4) { transition-delay: 150ms }
